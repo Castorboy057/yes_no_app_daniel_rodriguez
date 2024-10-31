@@ -21,7 +21,7 @@ notifyListeners();
 //Mueve el scroll
 moveScrollToBottom();
 }
-
+//Es una promesa
   //Mover el scroll al ultimo mensaje
   Future<void> moveScrollToBottom() async{
     //Un atraso en la animacion para garantizar que siempre 
