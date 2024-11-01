@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:yes_no_app_daniel_rodriguez/config/theme/app_theme.dart';
-import 'package:yes_no_app_daniel_rodriguez/presentacion/chat/chat_screen.dart';
+import 'package:yes_no_app_daniel_rodriguez/presentacion/screen/chat/chat_screen.dart';
 
 void main() => runApp(const MyApp());
 
