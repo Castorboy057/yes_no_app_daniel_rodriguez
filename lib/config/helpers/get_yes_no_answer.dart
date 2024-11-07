@@ -8,10 +8,9 @@ class GetYesNoAnswer {
   //para manejar las peticiones HTTP
   final _dio = Dio();
   //Para obtener la respuesta 
-  Future<Message> getAnswer() async {
-final response = await _dio.get("https:///yesno.wtf/api");
-
-//Gen
-throw UnimplementedError();
+  Future<Message> getAnswer() async { 
+    final response = await _dio.get("https://yesno.wtf/api");
+    
+    throw UnimplementedError();
   }
 }
