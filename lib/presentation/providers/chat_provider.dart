@@ -4,8 +4,7 @@ import 'package:yes_no_app_daniel_rodriguez/domain/entities/message.dart';
 
 class ChatProvider extends ChangeNotifier {
   List<Message> messageList = [
-    Message(text: "Hola Ader", fromWho: FromWho.me),
-    Message(text: "¿Lloras porque reprobaste tópicos?", fromWho: FromWho.me),
+    
   ];
 
   // Controlador para manejar la posición del scroll
@@ -20,7 +19,7 @@ class ChatProvider extends ChangeNotifier {
   Future<void> sendMessage(String text) async {
     if(text.trim().isEmpty) return;
     // El mensaje
-    final newMessage = Message(text: text, fromWho: FromWho.me);
+    final newMessage = Message(text: text, fromWho: FromWho.me, DateTime.timestamp());
     // Agrega un elemento a la lista
     messageList.add(newMessage);
 
@@ -38,7 +37,7 @@ class ChatProvider extends ChangeNotifier {
   // Mover el scroll al último mensaje
   Future<void> moveScrollToBottom() async {
     // Verifica si el controlador tiene clientes antes de intentar desplazar el scroll
-    if (chatScrollController.hasClients) {
+ {
       // Un atraso en la animación para garantizar que siempre se vea, aun cuando se envíen mensajes cortos y largos
       await Future.delayed(const Duration(milliseconds: 100));
       chatScrollController.animateTo(

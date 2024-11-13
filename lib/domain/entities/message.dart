@@ -4,8 +4,9 @@ class Message {
   final String text;
   final String? imageUrl;
   final FromWho fromWho;
+  final DateTime timeStamp;
 
 
 
-  Message({required this.text, this.imageUrl, required this.fromWho});
+  Message(this.timeStamp, {required this.text, this.imageUrl, required this.fromWho});
 }
