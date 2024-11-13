@@ -37,6 +37,7 @@ class YesNoModel {
                 : "Quizás",
         fromWho: FromWho.hers,
         imageUrl: image,
+        // Se asigna el tiempo actual
         DateTime.timestamp()
       );
 

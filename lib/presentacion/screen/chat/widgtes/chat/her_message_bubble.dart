@@ -40,10 +40,12 @@ class HerMessageBubble extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             Text(
-              timeFormat.format(message.timeStamp),
+              timeFormat.format(message.timeStamp), // Formatea y muestra la hora del mensaje en 'HH:mm'
+              // Estilo de texto en gris y tamaño de fuente pequeño
               style: const TextStyle(color: Colors.grey, fontSize: 12),
             ),
             const SizedBox(width: 5),
+            // Icono de doble palomita para indicar el estado de "leído"
             Icon(
               Icons.done_all,
               color: isRead ? Colors.blue : Colors.blue, // Azul si el mensaje fue leído, gris si no
